@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kitron4ik.github.io/nte-po-russki/sitemap.xml

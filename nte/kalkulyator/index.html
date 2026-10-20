@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор круток NTE: гарант, шанс S-ранга, сколько Annulith нужно</title>
+<meta name="description" content="Бесплатный калькулятор круток Neverness to Everness (НТЕ): сколько круток до гаранта персонажа и арка, сколько Annulith не хватает, шанс получить S-ранг за ваши круты.">
+<meta property="og:title" content="Калькулятор круток NTE (Neverness to Everness)">
+<meta property="og:description" content="Сколько круток до гаранта, сколько Annulith не хватает и какой шанс получить персонажа за ваши круты.">
+<meta property="og:image" content="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/og.jpg">
+<meta property="og:url" content="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">
+<link rel="canonical" href="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#07090d">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="logo-192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Сколько круток до гаранта в NTE?","acceptedAnswer":{"@type":"Answer","text":"На лимитном баннере персонажа гарантированный S-ранг выпадает на 90-й крутке. После 70 круток без S-ранга игровое поле обновляется, и S-клетки встречаются чаще."}},
+{"@type":"Question","name":"Есть ли в NTE «50 на 50»?","acceptedAnswer":{"@type":"Answer","text":"По данным двух гайдов, нет: любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера."}},
+{"@type":"Question","name":"Переносится ли гарант на следующий баннер?","acceptedAnswer":{"@type":"Answer","text":"Да, на следующий лимитный баннер персонажа. Если закончили на 40 из 90, следующий баннер начнётся с 40 из 90."}},
+{"@type":"Question","name":"Сколько круток нужно на арк (оружие)?","acceptedAnswer":{"@type":"Answer","text":"S-арк гарантирован не позже 60-й крутки. Фирменный арк с баннера гарантирован в пределах 80 круток."}},
+{"@type":"Question","name":"Какой шанс S-ранга в NTE без гаранта?","acceptedAnswer":{"@type":"Answer","text":"Гайды расходятся: 0,99% у одного и 1,88% у другого. Точную цифру смотрите в правилах баннера в игре. Калькулятор считает по обоим вариантам."}}
+]}
+</script>
+<style>
+@font-face{font-family:"Russo One";src:url("fonts/RussoOne-Regular.ttf") format("truetype");font-display:swap}
+:root{color-scheme:dark;--HH:clamp(360px,29vw,470px);--y:#ffc61a;--k:#07090d;--k2:#0e1620;--c:#50e6ff;--text:#ecf2f7;--mut:#9fb2c1;--line:rgba(255,198,26,.32);--ok:#4ee08a;--bad:#ff6b6b;--max:1160px;--n:18px;
+ --cut:polygon(var(--n) 0,100% 0,100% calc(100% - var(--n)),calc(100% - var(--n)) 100%,0 100%,0 var(--n));
+ --slant:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--k);color:var(--text);font:17px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.045) 1px,transparent 1.5px) 0 0/14px 14px;pointer-events:none;z-index:0}
+a{color:var(--y);text-underline-offset:4px}
+a:focus-visible,summary:focus-visible,.btn:focus-visible,.tab:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+h1,h2,.num,.tab,.btn,.tag,.logo,.pill{font-family:"Russo One",system-ui,sans-serif;font-weight:400}
+.top{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:3px solid var(--y)}
+.top div{max-width:var(--max);margin:0 auto;padding:8px 20px;display:flex;gap:6px;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-right:auto;font-size:18px}
+.logo img{width:40px;height:40px;border-radius:50%;background:#0b1622;border:2px solid var(--y)}
+.nav{position:relative;isolation:isolate;color:#cfd8e0;text-decoration:none;font:400 14px "Russo One",sans-serif;letter-spacing:.03em;padding:9px 18px;white-space:nowrap}
+.nav::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);transform:scaleX(0);transform-origin:left;transition:transform .22s;z-index:-1}
+.nav:hover{color:#000}.nav:hover::before{transform:scaleX(1)}
+.nav.cur{color:#000}.nav.cur::before{transform:scaleX(1)}
+.pill{position:relative;isolation:isolate;margin-left:10px;padding:9px 20px;color:#000;text-decoration:none;font-size:14px;white-space:nowrap}
+.pill::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);z-index:-1}
+.pill::after{content:"";position:absolute;inset:3px -3px -3px 3px;background:var(--c);clip-path:var(--slant);z-index:-2}
+/* сцена */
+.stage{--H:var(--HH);overflow-x:clip;position:relative;background:#0a121b;border-bottom:4px solid var(--y);z-index:2}
+.stage-bg{position:absolute;inset:0;background:url("hero-nte.jpg") center/cover no-repeat;overflow:hidden}
+.stage-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,9,13,.94) 0%,rgba(7,9,13,.72) 42%,rgba(7,9,13,.1) 78%),linear-gradient(0deg,rgba(7,9,13,.8),transparent 35%)}
+.giant{position:absolute;left:-1%;top:6%;font:400 clamp(180px,26vw,380px)/1 "Russo One",sans-serif;color:transparent;-webkit-text-stroke:2px rgba(255,198,26,.2);pointer-events:none;letter-spacing:-.02em;white-space:nowrap}
+.stage-in{position:relative;max-width:var(--max);margin:0 auto;padding:40px 20px 56px;min-height:clamp(320px,26vw,390px);z-index:2}
+.tag{display:inline-block;background:var(--c);color:#001018;padding:5px 22px 5px 14px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;clip-path:var(--slant);margin-bottom:18px}
+h1{margin:0 0 20px;line-height:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.slab{display:inline-block;position:relative;isolation:isolate;padding:6px 38px 8px 22px;font-size:clamp(30px,5vw,64px);letter-spacing:-.01em;transform:skewX(-8deg)}
+.slab>span{display:inline-block;transform:skewX(8deg)}
+.slab.y{color:#000}.slab.y::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-1;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.18) 1.2px,transparent 1.8px);background-size:7px 7px;background-color:var(--y)}
+.slab.y::after{content:"";position:absolute;inset:6px -7px -6px 7px;background:#000;clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-2}
+.slab.k{color:#fff;margin-left:34px}.slab.k::before{content:"";position:absolute;inset:0;background:#05080b;border-left:5px solid var(--c);clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-1}
+.lead{font-size:clamp(16px,1.7vw,19px);line-height:1.55;color:#e4ebf1;margin:0;max-width:44ch;padding-left:16px;border-left:4px solid var(--y)}
+/* героиня сидит на плашке и подбрасывает монету */
+.girl{position:absolute;right:calc(2% - var(--H) * .02);height:var(--H);width:auto;bottom:calc(var(--H) * -.37);z-index:6;pointer-events:none;filter:drop-shadow(8px 10px 0 rgba(0,0,0,.45))}
+.pedestal{position:absolute;right:calc(2% - var(--H) * .07);bottom:calc(var(--H) * -.046);width:calc(var(--H) * .96);height:calc(var(--H) * .096);z-index:4;background:var(--y);clip-path:polygon(24px 0,100% 0,calc(100% - 24px) 100%,0 100%);display:flex;align-items:center;padding-left:calc(var(--H) * .064);font:400 clamp(12px,1.1vw,16px) "Russo One",sans-serif;color:#000;letter-spacing:.16em}
+.pedestal::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.2) 1.3px,transparent 2px);background-size:7px 7px}
+.pedestal-sh{position:absolute;right:calc(2% - var(--H) * .084);bottom:calc(var(--H) * -.06);width:calc(var(--H) * .96);height:calc(var(--H) * .096);z-index:3;background:#000;clip-path:polygon(24px 0,100% 0,calc(100% - 24px) 100%,0 100%)}
+/* основное */
+.main{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:34px 20px 70px}
+.col{max-width:760px}
+.cp{position:relative;isolation:isolate}
+.cp::before{content:"";position:absolute;inset:0;background:var(--edge,var(--y));clip-path:var(--cut);z-index:-2}
+.cp::after{content:"";position:absolute;inset:2px;background:var(--fill,var(--k2));clip-path:var(--cut);z-index:-1}
+.tabs{display:flex;gap:12px;margin:0 0 16px}
+.tab{position:relative;isolation:isolate;flex:1;padding:13px 10px;background:none;border:0;color:#fff;font-size:16px;cursor:pointer}
+.tab::before{content:"";position:absolute;inset:0;background:#0b141d;box-shadow:inset 0 0 0 2px var(--line);clip-path:var(--slant);z-index:-1;transition:background .15s}
+.tab[aria-selected="true"]{color:#000}.tab[aria-selected="true"]::before{background:var(--y);box-shadow:none}
+.panel{--edge:rgba(255,198,26,.55);padding:22px 24px 24px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;color:var(--mut);margin:0 0 5px}
+input[type=number],select{width:100%;padding:12px;border:2px solid rgba(255,255,255,.16);background:#08111a;color:var(--text);font-size:18px;font-family:inherit;border-radius:0}
+input:focus,select:focus{outline:0;border-color:var(--y)}
+.hint{font-size:13px;line-height:1.45;color:var(--mut);margin:5px 0 0}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:20px}
+.box{background:rgba(255,255,255,.04);box-shadow:inset 3px 0 0 var(--y);padding:14px 14px 14px 18px;clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+.box small{display:block;color:var(--mut);font-size:13px;margin-bottom:4px}
+.num{font-size:32px;line-height:1.1;color:var(--y)}
+.num.ok{color:var(--ok)}.num.bad{color:var(--bad)}
+.box p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--mut)}
+.bar{height:10px;background:rgba(255,255,255,.1);overflow:hidden;margin:10px 0 4px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--y),var(--c));width:0;transition:width .35s}
+.msg{margin-top:14px;padding:12px 14px;border-left:4px solid var(--y);background:rgba(255,198,26,.08)}
+.cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px}
+.btn{position:relative;isolation:isolate;display:inline-block;padding:14px 28px;color:#000;text-decoration:none;font-size:16px;background:none;border:0;cursor:pointer;transition:transform .15s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);z-index:-1}
+.btn::after{content:"";position:absolute;inset:5px -5px -5px 5px;background:#000;clip-path:var(--slant);z-index:-2;transition:inset .15s}
+.btn:hover{transform:translate(3px,3px)}.btn:hover::after{inset:2px -2px -2px 2px}
+.btn.alt{color:#fff}.btn.alt::before{background:#0b141d;box-shadow:inset 0 0 0 2px var(--y)}
+.cta span{color:var(--mut);font-size:14px}
+h2{font-size:24px;margin:44px 0 12px;color:#fff;display:flex;align-items:center;gap:12px}
+h2::before{content:"";width:14px;height:22px;background:var(--y);transform:skewX(-14deg);box-shadow:5px 0 0 var(--c)}
+details{--edge:rgba(255,255,255,.14);--n:12px;padding:12px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:9px 8px;border-bottom:1px solid rgba(255,255,255,.1);text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:600}
+.src{font-size:13px;color:var(--mut);margin-top:30px}
+.hidden{display:none}
+.note{font-size:13px;color:var(--mut)}
+footer{position:relative;z-index:1;border-top:4px solid var(--y);background:#05070a;padding:26px 20px 44px;font-size:14px;color:var(--mut)}
+footer div{max-width:var(--max);margin:0 auto}
+@media (max-width:1000px){
+ :root{--HH:clamp(340px,70vw,460px)}
+ .stage-in{padding-bottom:calc(var(--H) * .68);min-height:0}
+ .main{padding-top:calc(var(--HH) * .37 + 34px)}
+}
+@media (max-width:620px){
+ body{font-size:16.5px}
+ .grid{grid-template-columns:1fr}
+ .panel{padding:18px 16px 20px}
+ .nav.opt{display:none}
+ .logo{font-size:15px;white-space:nowrap;gap:8px}.logo img{width:34px;height:34px}
+ .pill{margin-left:4px;padding:8px 14px;font-size:13px}
+ .slab.k{margin-left:18px}
+ .stage-in{padding-top:36px}
+ .tab{font-size:14px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div>
+  <a class="logo" href="https://kitron4ik.github.io/nte-po-russki/"><img src="logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
+  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/garant/">Гарант</a>
+  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/valyuty/">Валюты</a>
+  <a class="nav opt cur" href="./" aria-current="page">Калькулятор</a>
+  <a class="pill" href="https://max.ru/channel_nte_po_russki" rel="noopener">Канал в MAX</a>
+</div></header>
+<section class="stage"><div class="stage-bg"></div><div class="giant" aria-hidden="true">NTE</div>
+<div class="stage-in">
+  <span class="tag">Инструмент</span>
+  <h1><span class="slab y"><span>Калькулятор</span></span><span class="slab k"><span>круток NTE</span></span></h1>
+  <p class="lead">Neverness to Everness (НТЕ): сколько круток до гаранта, сколько Annulith не хватает и какой шанс получить S-ранг. Без регистрации.</p>
+</div>
+<div class="pedestal-sh"></div><div class="pedestal">КРУТКИ NTE</div>
+<img class="girl" src="hero-coin.png" alt="Героиня NTE по-русски сидит и подбрасывает монету" width="320" height="522">
+</section>
+<main class="main"><div class="col">
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-char" aria-selected="true" aria-controls="p-char">Персонаж</button>
+    <button class="tab" role="tab" id="tab-arc" aria-selected="false" aria-controls="p-arc">Арк (оружие)</button>
+  </div>
+
+  <section class="panel cp" id="p-char" role="tabpanel">
+    <div class="grid">
+      <div>
+        <label for="c-pity">Круток без S-ранга (0–89)</label>
+        <input id="c-pity" type="number" inputmode="numeric" min="0" max="89" value="0">
+        <p class="hint">Сколько круток прошло с последнего S-ранга на лимитном баннере персонажа. Гарант переходит между лимитными баннерами.</p>
+      </div>
+      <div>
+        <label for="c-dice">Solid Dice</label>
+        <input id="c-dice" type="number" inputmode="numeric" min="0" value="0">
+        <p class="hint">Одна крутка лимитного баннера персонажа.</p>
+      </div>
+      <div>
+        <label for="c-ann">Annulith</label>
+        <input id="c-ann" type="number" inputmode="numeric" min="0" value="0">
+        <p class="hint">Из него делают Solid Dice.</p>
+      </div>
+      <div>
+        <label for="c-cost">Annulith за одну крутку</label>
+        <input id="c-cost" type="number" inputmode="numeric" min="1" value="160">
+        <p class="hint">160 по одному гайду (EnjoyGM). Проверьте в игре и поправьте.</p>
+      </div>
+    </div>
+    <div class="res" id="r-char" aria-live="polite"></div>
+  </section>
+
+  <section class="panel cp hidden" id="p-arc" role="tabpanel">
+    <div class="grid">
+      <div>
+        <label for="a-pity">Круток без S-арка (0–59)</label>
+        <input id="a-pity" type="number" inputmode="numeric" min="0" max="59" value="0">
+        <p class="hint">Сколько круток на баннере арков прошло с последнего S-арка.</p>
+      </div>
+      <div>
+        <label for="a-keys">Tri-Key</label>
+        <input id="a-keys" type="number" inputmode="numeric" min="0" value="0">
+        <p class="hint">Крутки арков идут только десятками, по одному гайду (BlueStacks).</p>
+      </div>
+    </div>
+    <div class="res" id="r-arc" aria-live="polite"></div>
+  </section>
+
+  <div class="cta">
+    <a class="btn" href="https://max.ru/channel_nte_po_russki" rel="noopener">Новости NTE в MAX</a>
+    <button class="btn alt" id="share">Скопировать результат</button>
+    <span id="share-ok" class="note"></span>
+  </div>
+  <p class="note">В канале в MAX: календарь событий, гайды для новичков и ответы на вопросы. Всё проверяем по двум источникам.</p>
+
+  <h2>Как это считается</h2>
+  <table>
+    <tr><th>Правило</th><th>Значение</th></tr>
+    <tr><td>Гарант S-ранга для персонажа</td><td>90-я крутка</td></tr>
+    <tr><td>«50 на 50» на лимитном баннере</td><td>Нет: любой S-ранг это персонаж баннера</td></tr>
+    <tr><td>Перенос гаранта</td><td>На следующий лимитный баннер (40/90 остаётся 40/90)</td></tr>
+    <tr><td>Поле обновляется</td><td>После 70 круток без S-ранга; шанс по гайдам ~19,59% за крутку</td></tr>
+    <tr><td>Базовый шанс S-ранга</td><td>0,99% или 1,88%, гайды расходятся: считаем оба</td></tr>
+    <tr><td>Арки</td><td>S-арк не позже 60-й крутки; фирменный в пределах 80</td></tr>
+  </table>
+  <p class="note">Шанс считается как оценка: до 70-й крутки по базовому шансу, с 71-й по 19,59%, на 90-й гарантия. Реальная механика поля может отличаться. Это не официальные данные.</p>
+
+  <h2>Частые вопросы</h2>
+  <details class="cp"><summary>Сколько круток до гаранта в NTE?</summary><p>На лимитном баннере персонажа гарантированный S-ранг на 90-й крутке. После 70 круток без S-ранга игровое поле обновляется, S-клетки встречаются чаще.</p></details>
+  <details class="cp"><summary>Есть ли в NTE «50 на 50»?</summary><p>По данным двух гайдов, нет. Любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера.</p></details>
+  <details class="cp"><summary>Переносится ли гарант на следующий баннер?</summary><p>Да, на следующий лимитный баннер персонажа. Закончили на 40 из 90, следующий начнётся с 40 из 90.</p></details>
+  <details class="cp"><summary>Сколько круток нужно на арк?</summary><p>S-арк гарантирован не позже 60-й крутки. Фирменный арк с баннера гарантирован в пределах 80 круток.</p></details>
+  <details class="cp"><summary>Какой базовый шанс S-ранга?</summary><p>Гайды расходятся: 0,99% и 1,88%. Точную цифру смотрите в правилах баннера в игре. Калькулятор показывает шанс по обоим вариантам.</p></details>
+
+  <p class="src">Источники: <a href="https://www.bluestacks.com/blog/game-guides/neverness-to-everness/nte-gacha-guide-en.html" rel="noopener">BlueStacks, 16.04.2026</a>, <a href="https://www.enjoygm.com/blog/neverness-to-everness/gacha-system-guide" rel="noopener">EnjoyGM, 06.04.2026</a>. Данные проверены 17.10.2026, неофициальные. Neverness to Everness принадлежит Hotta Studio и Perfect World; сайт не связан с издателями.</p>
+</div></main>
+<footer><div>NTE по-русски – неофициальный проект игроков. Neverness to Everness принадлежит Hotta Studio и Perfect World. Канал: <a href="https://max.ru/channel_nte_po_russki" rel="noopener">NTE по-русски в MAX</a>.</div></footer>
+
+<script>
+// ----- Правила и константы: меняйте здесь, когда игра обновится -----
+const RULES = {
+  charHard: 90,            // гарант S-ранга для персонажа
+  softStart: 70,           // после стольких круток без S поле обновляется
+  softRate: 0.1959,        // шанс за крутку после обновления поля (оба гайда)
+  baseRates: [0.0099, 0.0188], // гайды расходятся
+  arcFirst: 60,            // S-арк гарантирован не позже
+  arcSigned: 80,           // фирменный арк в пределах
+  costDefault: 160         // Annulith за крутку (EnjoyGM)
+};
+
+const $ = (id) => document.getElementById(id);
+const int = (id, lo, hi) => {
+  let v = parseInt($(id).value, 10);
+  if (!Number.isFinite(v)) v = lo;
+  return Math.min(hi ?? 1e9, Math.max(lo, v));
+};
+const pct = (x) => {
+  const v = x * 100;
+  if (v >= 99.95) return "100%";
+  if (v < 0.05) return "0%";
+  return v.toLocaleString("ru-RU", { maximumFractionDigits: v < 10 ? 1 : 0 }) + "%";
+};
+const plural = (n, a, b, c) => {
+  const m = Math.abs(n) % 100, d = m % 10;
+  return m > 10 && m < 20 ? c : d > 1 && d < 5 ? b : d === 1 ? a : c;
+};
+
+// Шанс получить S-ранг за `pulls` круток, если уже накоплено `counter` без S
+function charChance(counter, pulls, base) {
+  let notS = 1;
+  for (let i = 0; i < pulls; i++) {
+    const c = counter + i;                  // круток без S перед этой
+    let p;
+    if (c + 1 >= RULES.charHard) p = 1;
+    else if (c >= RULES.softStart) p = RULES.softRate;
+    else p = base;
+    notS *= 1 - p;
+    if (p === 1) break;
+  }
+  return 1 - notS;
+}
+
+function box(label, valueHtml, note, cls = "") {
+  return `<div class="box"><small>${label}</small><div class="num ${cls}">${valueHtml}</div>${note ? `<p>${note}</p>` : ""}</div>`;
+}
+
+function calcChar() {
+  const pity = int("c-pity", 0, RULES.charHard - 1);
+  const dice = int("c-dice", 0);
+  const ann = int("c-ann", 0);
+  const cost = int("c-cost", 1);
+  const rem = RULES.charHard - pity;                 // круток до гаранта
+  const have = dice + Math.floor(ann / cost);        // сколько круток доступно
+  const needAnn = Math.max(0, rem * cost - (dice * cost + ann));
+  const enough = have >= rem;
+  const progress = Math.round((pity / RULES.charHard) * 100);
+  const [lo, hi] = RULES.baseRates;
+  const pLo = charChance(pity, have, lo);
+  const pHi = charChance(pity, have, hi);
+  let html = "";
+  html += box("До гаранта осталось", `${rem} ${plural(rem, "крутка", "крутки", "круток")}`,
+    `<div class="bar"><i style="width:${progress}%"></i></div>Накоплено ${pity} из ${RULES.charHard} (${progress}%)`);
+  html += box("Доступно круток", `${have}`, `${dice} Solid Dice и ${Math.floor(ann / cost)} из Annulith (по ${cost} за крутку)`);
+  html += box(enough ? "На гарант хватает" : "Не хватает Annulith", enough ? "Да" : needAnn.toLocaleString("ru-RU"),
+    enough ? `Останется ${have - rem} ${plural(have - rem, "крутка", "крутки", "круток")} после гаранта` : `Ещё ${rem - have} ${plural(rem - have, "крутка", "крутки", "круток")}`, enough ? "ok" : "bad");
+  html += box("Шанс получить персонажа", `${pct(pLo)} – ${pct(pHi)}`,
+    `С ${have} ${plural(have, "круткой", "крутками", "крутками")}. Левая цифра при базовом шансе 0,99%, правая при 1,88%`);
+  const soft = pity >= RULES.softStart;
+  const msg = soft
+    ? `У вас уже ${pity} круток без S-ранга: поле обновлено, шанс за крутку по гайдам около ${(RULES.softRate * 100).toFixed(2).replace(".", ",")}%.`
+    : `Поле обновится после ${RULES.softStart} круток без S-ранга, то есть через ${RULES.softStart - pity} ${plural(RULES.softStart - pity, "крутку", "крутки", "круток")}.`;
+  $("r-char").innerHTML = html + `<div class="msg" style="grid-column:1/-1">${msg}</div>`;
+  return `NTE, персонаж: ${pity}/${RULES.charHard} круток, до гаранта ${rem}; доступно ${have}; ` + (enough ? "на гарант хватает" : `не хватает ${needAnn} Annulith`) + `; шанс ${pct(pLo)}–${pct(pHi)}`;
+}
+
+function calcArc() {
+  const pity = int("a-pity", 0, RULES.arcFirst - 1);
+  const keys = int("a-keys", 0);
+  const remFirst = RULES.arcFirst - pity;
+  const remSigned = RULES.arcSigned - pity;
+  const progress = Math.round((pity / RULES.arcFirst) * 100);
+  const tens = Math.floor(keys / 10);
+  let html = "";
+  html += box("До гаранта S-арка", `${remFirst} ${plural(remFirst, "крутка", "крутки", "круток")}`,
+    `<div class="bar"><i style="width:${progress}%"></i></div>Накоплено ${pity} из ${RULES.arcFirst} (${progress}%)`);
+  html += box("Фирменный арк не позже", `${remSigned} ${plural(remSigned, "крутка", "крутки", "круток")}`,
+    "По гайдам на первом S-арке 25% шанс фирменного, дальше гарантия в пределах 80 круток всего. Как именно считается после S-арка, проверьте в игре.");
+  html += box("Tri-Key", `${keys}`, `Хватит на ${tens} ${plural(tens, "десятку", "десятки", "десяток")} (${tens * 10} круток)`, tens * 10 >= remFirst ? "ok" : "");
+  $("r-arc").innerHTML = html + `<div class="msg" style="grid-column:1/-1">Шанс получить S-арк до гарантии не считаем: базовый шанс для арков в гайдах не указан.</div>`;
+  return `NTE, арк: ${pity}/${RULES.arcFirst} круток, до гаранта ${remFirst}; фирменный в пределах ${remSigned}; Tri-Key ${keys}`;
+}
+
+let last = "";
+function update() {
+  last = $("p-char").classList.contains("hidden") ? calcArc() : calcChar();
+}
+function show(which) {
+  const char = which === "char";
+  $("p-char").classList.toggle("hidden", !char);
+  $("p-arc").classList.toggle("hidden", char);
+  $("tab-char").setAttribute("aria-selected", char);
+  $("tab-arc").setAttribute("aria-selected", !char);
+  calcChar(); calcArc(); update();
+}
+$("tab-char").onclick = () => show("char");
+$("tab-arc").onclick = () => show("arc");
+document.querySelectorAll("input,select").forEach((el) => el.addEventListener("input", () => { calcChar(); calcArc(); update(); }));
+$("share").onclick = async () => {
+  const text = last + "\nКалькулятор: " + location.href.split("#")[0];
+  try { await navigator.clipboard.writeText(text); $("share-ok").textContent = "Скопировано"; }
+  catch (e) { $("share-ok").textContent = "Не удалось скопировать, выделите вручную"; }
+  setTimeout(() => ($("share-ok").textContent = ""), 2500);
+};
+// сохранение последних значений в браузере (только на этом устройстве)
+try {
+  const saved = JSON.parse(localStorage.getItem("nte-calc") || "{}");
+  for (const k in saved) if ($(k)) $(k).value = saved[k];
+  document.querySelectorAll("input,select").forEach((el) => el.addEventListener("input", () => {
+    const out = {}; document.querySelectorAll("input,select").forEach((e) => (out[e.id] = e.value));
+    localStorage.setItem("nte-calc", JSON.stringify(out));
+  }));
+} catch (e) { /* без хранилища всё работает */ }
+calcChar(); calcArc(); update();
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гарант в NTE (Neverness to Everness): сколько круток, есть ли 50 на 50</title>
+<meta name="description" content="Как работает гарант в Neverness to Everness: S-ранг персонажа на 90-й крутке, нет «50 на 50», перенос гаранта на следующий баннер, арки на 60 и 80 круток. Где два гайда расходятся.">
+<link rel="canonical" href="https://kitron4ik.github.io/nte-po-russki/nte/garant/">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kitron4ik.github.io/nte-po-russki/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="https://kitron4ik.github.io/nte-po-russki/assets/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Гарант в NTE (Neverness to Everness): сколько круток, есть ли 50 на 50">
+<meta property="og:description" content="Как работает гарант в Neverness to Everness: S-ранг персонажа на 90-й крутке, нет «50 на 50», перенос гаранта на следующий баннер, арки на 60 и 80 круток. Где два гайда расходятся.">
+<meta property="og:url" content="https://kitron4ik.github.io/nte-po-russki/nte/garant/">
+<meta property="og:image" content="https://kitron4ik.github.io/nte-po-russki/assets/og-garant.jpg">
+<meta name="theme-color" content="#07090d">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько круток до гаранта в NTE?", "acceptedAnswer": {"@type": "Answer", "text": "На лимитном баннере персонажа гарантированный S-ранг выпадает на 90-й крутке. После 70 круток без S-ранга поле обновляется и S-клетки встречаются чаще."}}, {"@type": "Question", "name": "Есть ли в NTE «50 на 50»?", "acceptedAnswer": {"@type": "Answer", "text": "По данным двух гайдов, нет: любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера."}}, {"@type": "Question", "name": "Переносится ли гарант на следующий баннер в NTE?", "acceptedAnswer": {"@type": "Answer", "text": "Да, на следующий лимитный баннер персонажа. Если закончили на 40 из 90, следующий начнётся с 40 из 90."}}, {"@type": "Question", "name": "Сколько круток нужно на арк в NTE?", "acceptedAnswer": {"@type": "Answer", "text": "S-арк гарантирован не позже 60-й крутки, фирменный арк с баннера в пределах 80 круток."}}, {"@type": "Question", "name": "Какой базовый шанс S-ранга в NTE?", "acceptedAnswer": {"@type": "Answer", "text": "Гайды расходятся: 0,99% у одного и 1,88% у другого. Точную цифру смотрите в правилах баннера в игре."}}]}</script>
+<style>
+@font-face{font-family:"Russo One";src:url("https://kitron4ik.github.io/nte-po-russki/assets/fonts/RussoOne-Regular.ttf") format("truetype");font-display:swap}
+:root{color-scheme:dark;--y:#ffc61a;--y2:#fff1a8;--k:#07090d;--k2:#0e1620;--c:#50e6ff;--text:#ecf2f7;--mut:#9fb2c1;--line:rgba(255,198,26,.28);--max:1160px;--n:20px;
+ --cut:polygon(var(--n) 0,100% 0,100% calc(100% - var(--n)),calc(100% - var(--n)) 100%,0 100%,0 var(--n));
+ --slant:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--k);color:var(--text);font:17px/1.7 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.045) 1px,transparent 1.5px) 0 0/14px 14px;pointer-events:none;z-index:0}
+a{color:var(--y);text-underline-offset:4px}
+a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.rus{font-family:"Russo One",system-ui,sans-serif;font-weight:400}
+.prog{position:fixed;left:0;top:0;height:4px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--y),var(--c));z-index:80}
+/* панель: срезанные углы + контур */
+.cp{position:relative;isolation:isolate}
+.cp::before{content:"";position:absolute;inset:0;background:var(--edge,var(--y));clip-path:var(--cut);z-index:-2}
+.cp::after{content:"";position:absolute;inset:2px;background:var(--fill,var(--k2));clip-path:var(--cut);z-index:-1}
+/* верхняя панель */
+.top{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:3px solid var(--y)}
+.top div{max-width:var(--max);margin:0 auto;padding:8px 20px;display:flex;gap:6px;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-right:auto;font:400 18px "Russo One",sans-serif}
+.logo img{width:40px;height:40px;border-radius:50%;background:#0b1622;border:2px solid var(--y)}
+.nav{position:relative;isolation:isolate;color:#cfd8e0;text-decoration:none;font:400 14px "Russo One",sans-serif;letter-spacing:.03em;padding:9px 18px;white-space:nowrap}
+.nav::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);transform:scaleX(0);transform-origin:left;transition:transform .22s;z-index:-1}
+.nav:hover{color:#000}.nav:hover::before{transform:scaleX(1)}
+.pill{position:relative;isolation:isolate;margin-left:10px;padding:9px 20px;color:#000;text-decoration:none;font:400 14px "Russo One",sans-serif;white-space:nowrap}
+.pill::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);z-index:-1}
+.pill::after{content:"";position:absolute;inset:3px -3px -3px 3px;background:var(--c);clip-path:var(--slant);z-index:-2}
+/* сцена */
+.stage{position:relative;overflow:visible;background:#0a121b;border-bottom:4px solid var(--y);z-index:2}
+.stage-bg{position:absolute;inset:0;background:var(--bg) center/cover no-repeat;overflow:hidden}
+.stage-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,9,13,.94) 0%,rgba(7,9,13,.72) 42%,rgba(7,9,13,.1) 78%),linear-gradient(0deg,rgba(7,9,13,.8),transparent 35%)}
+.stage-cut{position:absolute;left:0;right:0;bottom:-1px;height:54px;background:var(--k);clip-path:polygon(0 100%,0 55%,38% 100%,100% 0,100% 100%);z-index:3}
+.giant{position:absolute;left:-1.5%;top:2%;font:400 clamp(200px,34vw,470px)/.85 "Russo One",sans-serif;color:transparent;-webkit-text-stroke:2px rgba(255,198,26,.32);transform:rotate(-3deg);user-select:none;pointer-events:none;white-space:nowrap}
+.stage-in{position:relative;max-width:var(--max);margin:0 auto;padding:84px 20px 120px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:20px;min-height:clamp(760px,56vw,1080px);z-index:2;align-items:center}
+.kicker{display:inline-block;background:var(--c);color:#001018;font:400 13px "Russo One",sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:5px 20px 5px 14px;clip-path:var(--slant);margin-bottom:18px;animation:slide .7s both}
+.crumbs{font-size:14px;color:#b9c6d1;margin-bottom:14px}.crumbs a{color:#b9c6d1;text-decoration:none}.crumbs a:hover{color:var(--y)}
+h1{margin:0 0 22px;line-height:1;display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-family:"Russo One",sans-serif;font-weight:400}
+.slab{display:inline-block;position:relative;isolation:isolate;padding:6px 38px 8px 22px;font-size:clamp(34px,6vw,84px);letter-spacing:-.01em;transform:skewX(-8deg);animation:slide .7s both}
+.slab>span{display:inline-block;transform:skewX(8deg)}
+.slab.y{color:#000}.slab.y::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-1;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.18) 1.2px,transparent 1.8px);background-size:7px 7px;background-color:var(--y)}
+.slab.y::after{content:"";position:absolute;inset:6px -7px -6px 7px;background:#000;clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-2}
+.slab.k{color:#fff;margin-left:42px;animation-delay:.1s}.slab.k::before{content:"";position:absolute;inset:0;background:#05080b;border-left:5px solid var(--c);clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);z-index:-1}
+.slab.s{font-size:clamp(28px,4.6vw,60px)}
+.lead{font-size:clamp(17px,1.9vw,21px);line-height:1.55;color:#e4ebf1;margin:0 0 18px;max-width:46ch;padding-left:16px;border-left:4px solid var(--y)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;color:#cfd8e0;background:rgba(255,255,255,.07);padding:5px 14px;clip-path:var(--slant)}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin:26px 0 0}
+.btn{position:relative;isolation:isolate;display:inline-block;padding:14px 30px;color:#000;text-decoration:none;font:400 16px "Russo One",sans-serif;transition:transform .15s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--y);clip-path:var(--slant);z-index:-1}
+.btn::after{content:"";position:absolute;inset:5px -5px -5px 5px;background:#000;clip-path:var(--slant);z-index:-2;transition:inset .15s}
+.btn:hover{transform:translate(3px,3px)}.btn:hover::after{inset:2px -2px -2px 2px}
+.btn.alt{color:#fff}.btn.alt::before{background:#0b141d;box-shadow:inset 0 0 0 2px var(--y)}
+.btn.alt::after{background:var(--c)}
+/* персонаж, стоящий на пьедестале-плашке */
+.girl{position:absolute;z-index:6;pointer-events:none;filter:drop-shadow(8px 10px 0 rgba(0,0,0,.45))}
+.home .stage{--H:clamp(640px,52vw,1060px)}
+.home .stage-in{min-height:clamp(820px,60vw,1120px)}
+.home .girl.sit{right:calc(2% - 20px);height:var(--H);bottom:calc(var(--H) * -0.37);z-index:6;width:auto;animation:none}
+.home .girl{right:8%;bottom:-6px;height:740px;width:auto;object-fit:contain;animation:float 6s ease-in-out infinite}
+.pedestal{position:absolute;right:calc(2% - 70px);bottom:-46px;width:clamp(600px,50vw,980px);height:clamp(72px,5vw,96px);z-index:4;background:var(--y);clip-path:polygon(34px 0,100% 0,calc(100% - 34px) 100%,0 100%);display:flex;align-items:center;justify-content:flex-start;padding-left:64px;font:400 18px "Russo One",sans-serif;color:#000;letter-spacing:.16em}
+.pedestal::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.2) 1.3px,transparent 2px);background-size:7px 7px}
+.pedestal-sh{position:absolute;right:calc(2% - 84px);bottom:-60px;width:clamp(600px,50vw,980px);height:clamp(72px,5vw,96px);z-index:3;background:#000;clip-path:polygon(34px 0,100% 0,calc(100% - 34px) 100%,0 100%)}
+.keyart{position:absolute;right:13%;bottom:-6px;height:84%;aspect-ratio:570/1000;z-index:6;pointer-events:none}
+.keyart img,.keyart video{position:relative;display:block;width:100%;height:100%;filter:drop-shadow(8px 10px 0 rgba(0,0,0,.4));z-index:2}
+.keyart .beam{position:absolute;left:-89%;width:102%;top:21%;height:24%;z-index:1;background:linear-gradient(270deg,rgba(255,246,190,.45),rgba(255,246,190,0) 90%);clip-path:polygon(100% 50%,0 0,0 100%);transform:rotate(7deg);transform-origin:100% 50%;mix-blend-mode:screen}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes slide{from{opacity:0;transform:skewX(-8deg) translateX(-40px)}to{opacity:1;transform:skewX(-8deg)}}
+.kicker{animation-name:slideK}@keyframes slideK{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+.peekrow{display:flex;align-items:flex-end;margin-top:84px;position:relative;z-index:2;clip-path:inset(-300px -80px 0 -80px)}
+.peek{height:360px;width:auto;flex:none;position:relative;z-index:3;margin-right:-21px;margin-bottom:-44px;filter:drop-shadow(6px 8px 0 rgba(0,0,0,.35))}
+.peekband{--cut:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);--fill:#0b141d;flex:1;display:flex;flex-direction:column;gap:10px;align-items:flex-start;justify-content:center;min-height:318px;padding:30px 34px 30px 30px;color:#fff;text-decoration:none;position:relative;z-index:2}
+.peekband b{font:400 clamp(22px,3vw,30px)/1.2 "Russo One",sans-serif}
+.peekband .pt{color:var(--mut);font-size:16px;line-height:1.5;max-width:46ch}
+.peekband .btn{margin-top:6px}
+.peekband:hover .btn{transform:translate(3px,3px)}
+@media (max-width:560px){.peek{height:250px;margin-right:-14px;margin-bottom:-30px}.peekband{padding:20px 18px;min-height:220px}.peekband .pt{font-size:14.5px}}
+/* страницы гайдов: ступени с числами и персонаж сверху */
+.side{position:relative;align-self:end;padding-top:300px}
+.stairs{display:grid;gap:12px;position:relative;z-index:5}
+.side .girl.lean{height:auto;width:min(326px,70%);right:12px;top:auto;bottom:calc(100% - 299px);z-index:7}
+.side .girl.lie{height:auto;width:min(430px,92%);right:-6px;top:auto;bottom:calc(100% - 314px);z-index:7}
+.step:first-child{box-shadow:0 -6px 0 #000}
+.step{--fill:#0c141c;padding:16px 22px;display:flex;align-items:baseline;gap:14px}
+.step b{font:400 clamp(34px,5vw,56px)/1 "Russo One",sans-serif;color:var(--y2);white-space:nowrap}
+.step span{font-size:14px;color:var(--mut);line-height:1.35}
+.step:nth-child(1){margin-left:0}.step:nth-child(2){margin-left:34px}.step:nth-child(3){margin-left:68px}
+.page .girl{right:2%;top:auto;bottom:calc(100% - 300px);}
+.side .girl{position:absolute;right:24px;top:-34px;height:360px;width:auto;z-index:4;filter:drop-shadow(6px 8px 0 rgba(0,0,0,.45))}
+.page .stage-in{min-height:0;padding:56px 20px 110px;align-items:end}
+.page .stage-in .stairs{margin-top:0}
+/* текст */
+.layout{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:36px 20px 90px;display:grid;grid-template-columns:230px minmax(0,70ch);gap:56px;justify-content:center}
+.toc{position:sticky;top:88px;align-self:start;font-size:14.5px}
+.toc b{display:block;font:400 12px "Russo One",sans-serif;letter-spacing:.14em;color:var(--y);text-transform:uppercase;margin-bottom:10px}
+.toc a{display:block;position:relative;color:var(--mut);text-decoration:none;padding:7px 10px 7px 16px;line-height:1.3;border-left:3px solid #1b2733}
+.toc a:hover,.toc a.on{color:#fff;border-left-color:var(--y);background:linear-gradient(90deg,rgba(255,198,26,.14),transparent)}
+article>*:first-child{margin-top:0}
+h2{position:relative;font:400 clamp(22px,3vw,30px)/1.2 "Russo One",sans-serif;margin:62px 0 18px;padding-left:34px;scroll-margin-top:96px}
+h2::before{content:"";position:absolute;left:0;top:.12em;width:22px;height:.95em;background:var(--y);clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%)}
+h2::after{content:"";position:absolute;left:12px;top:.28em;width:22px;height:.95em;background:var(--c);clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);opacity:.8;z-index:-1}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 20px;padding-left:22px}li{margin:8px 0}li::marker{color:var(--y)}
+.tbl{--fill:#0c141c;margin:0 0 24px;padding:6px 16px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th,td{padding:13px 14px 13px 0;border-bottom:1px solid rgba(255,255,255,.1);text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{color:var(--y);font:400 12px "Russo One",sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.box{--fill:#101a24;--edge:var(--c);margin:26px 0;padding:18px 24px}
+.box p:last-child{margin:0}
+details{position:relative;margin:10px 0;--fill:#0c141c;--edge:#22303d;padding:16px 22px;transition:transform .15s}
+details[open]{--edge:var(--y)}
+details:hover{transform:translateX(4px)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--y);font:400 24px/1 "Russo One",sans-serif;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+summary::-webkit-details-marker{display:none}
+details p{margin:12px 0 0;color:var(--mut)}
+.src{font-size:15px;color:var(--mut)}.src a{color:var(--mut)}
+/* плитки */
+.tiles{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;position:relative;z-index:1}
+.tile{--fill:#0b141d;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:250px;padding:112px 28px 26px;color:#fff;text-decoration:none;transition:transform .2s}
+.tile:hover{transform:translate(-4px,-4px)}
+.tile:hover::before{background:var(--c)}
+.tile .pic{position:absolute;inset:2px;background:var(--img) center/cover;clip-path:var(--cut);opacity:.55;z-index:-1;transition:opacity .25s,transform .4s}
+.tile:hover .pic{opacity:.8;transform:scale(1.04)}
+.tile::after{display:none}
+.tile .shade{position:absolute;inset:2px;background:linear-gradient(0deg,rgba(7,9,13,.92),rgba(7,9,13,.25));clip-path:var(--cut);z-index:-1}
+.tile .no{position:absolute;right:22px;top:6px;font:400 70px/1 "Russo One",sans-serif;color:transparent;-webkit-text-stroke:2px rgba(255,198,26,.45)}
+.tile .ic{position:absolute;left:24px;top:20px;width:76px;height:auto;filter:drop-shadow(5px 6px 0 rgba(0,0,0,.5));transition:transform .3s}
+.tile:hover .ic{transform:rotate(-6deg) scale(1.08)}
+.tile b{font:400 22px/1.2 "Russo One",sans-serif;margin-bottom:6px}
+.tile span{font-size:15px;color:#cdd7e0;line-height:1.5}
+.tile.s7{grid-column:span 7}.tile.s5{grid-column:span 5}.tile.s6{grid-column:span 6}.tile.s4{grid-column:span 4}
+.tile.tall{min-height:310px}
+.home-main{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:84px 20px 90px}
+.home-main .tiles{margin-top:210px}
+.home-main h2{margin-top:0}
+.related{margin-top:56px}
+footer{position:relative;z-index:1;border-top:4px solid var(--y);background:#05070a;padding:30px 20px 54px;font-size:14px;color:var(--mut)}
+footer div{max-width:var(--max);margin:0 auto}footer a{color:var(--mut)}
+@media (max-width:980px){
+ .stage-in{grid-template-columns:1fr;padding-bottom:60px;min-height:0}
+ .home .stage-in{padding-bottom:20px}
+ .home .girl{position:relative;display:block;right:auto;bottom:auto;height:390px;margin:0 -6px -14px auto;animation:none}
+ .home .girl.sit{position:relative;height:440px;right:auto;bottom:auto;margin:0 -4px -150px auto;z-index:6}
+ .home .stage-in{min-height:0}
+ .keyart{position:relative;right:auto;bottom:auto;height:520px;margin:0 auto -6px auto}
+ .keyart .beam{display:none}
+ .home .stage-in{padding-bottom:0}
+ .home-main{padding-top:56px}
+ .home-main .tiles{margin-top:24px}
+ .pedestal{color:transparent}
+ .pedestal,.pedestal-sh{width:330px;right:0;height:56px;font-size:15px;padding-left:40px}.pedestal-sh{right:-12px}
+ .layout{grid-template-columns:minmax(0,1fr);gap:0}
+ .toc{position:static;margin-bottom:26px;padding:14px 16px;border:1px solid #1b2733;background:#0b141d}
+ .side{padding-top:250px}
+ .side .girl{height:290px;right:6px;top:-24px}
+ .tile.s7,.tile.s5,.tile.s6,.tile.s4{grid-column:span 12}
+}
+@media (min-width:700px) and (max-width:980px){
+ .home .stage-in{min-height:clamp(720px,92vw,880px);padding:72px 20px 40px}
+ .home .stage-in>div{max-width:52%}
+ .keyart{position:absolute;right:2%;bottom:-6px;height:84%;margin:0}
+}
+@media (max-width:560px){body{font-size:16.5px}.nav.opt{display:none}.logo{font-size:15px;white-space:nowrap;gap:8px}.logo img{width:34px;height:34px}.nav{padding:8px 10px;font-size:13px}.pill{margin-left:4px;padding:8px 14px;font-size:13px}.top div{gap:2px}.giant{top:-2%}.slab.k{margin-left:18px}.top div{padding:8px 14px}.step:nth-child(n){margin-left:0}.giant{font-size:210px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kicker,.slab,.girl{animation:none!important}.btn,.tile,.nav::before,details{transition:none}}
+</style>
+</head>
+<body class="nte page">
+<div class="prog" id="prog"></div>
+<header class="top"><div>
+  <a class="logo" href="https://kitron4ik.github.io/nte-po-russki/"><img src="https://kitron4ik.github.io/nte-po-russki/assets/logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
+  <a class="nav" href="https://kitron4ik.github.io/nte-po-russki/nte/garant/">Гарант</a>
+  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/valyuty/">Валюты</a>
+  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">Калькулятор</a>
+  <a class="pill" href="https://max.ru/channel_nte_po_russki">Канал в MAX</a>
+</div></header>
+<section class="stage" style="--bg:url('https://kitron4ik.github.io/nte-po-russki/assets/hero-nte.jpg')"><div class="stage-bg"></div><div class="giant" aria-hidden="true">ГАРАНТ</div>
+<div class="stage-in"><div>
+  <div class="crumbs"><a href="https://kitron4ik.github.io/nte-po-russki/">NTE по-русски</a> / Neverness to Everness</div>
+  <span class="kicker">Гайд</span>
+  <h1><span class="slab y s"><span>Гарант в NTE: как он работает</span></span></h1><p class="lead">Коротко: гарант S-ранга на лимитном баннере персонажа выпадает на 90-й крутке. «50 на 50» нет, любой S-ранг на таком баннере это персонаж с баннера. Гарант переходит на следующий баннер.</p><div class="chips"><span class="chip">Обновлено 17 октября 2026</span><span class="chip">По двум сторонним гайдам: BlueStacks (16.04.2026) и EnjoyGM (06.04.2026). Это не официальные данные</span></div>
+</div>
+<div class="side"><img class="girl lean" src="https://kitron4ik.github.io/nte-po-russki/assets/hero-lean.png" alt="" width="260" height="330"><div class="stairs lean"><div class="step cp"><b>90</b><span>круток до гарантированного S-ранга персонажа</span></div><div class="step cp"><b>70</b><span>поле обновляется</span></div><div class="step cp"><b>60 / 80</b><span>гарант арка и фирменного</span></div></div></div></div>
+<div class="stage-cut"></div></section>
+<div class="layout"><nav class="toc" aria-label="Содержание"><b>На этой странице</b><a href="#s0">Правила гаранта персонажа</a><a href="#s1">Арки (оружие)</a><a href="#s2">Где гайды расходятся</a><a href="#s3">Сколько круток осталось именно у вас</a><a href="#s4">Источники</a><a href="#faq">Частые вопросы</a></nav><article>
+
+<h2 id="s0">Правила гаранта персонажа</h2>
+<div class="tbl cp" style="--edge:#22303d"><table>
+<tr><th>Что</th><th>Как работает</th></tr>
+<tr><td>Гарант S-ранга</td><td>На 90-й крутке</td></tr>
+<tr><td>«50 на 50»</td><td>Нет. Любой S-ранг лимитного баннера персонажа это тот самый персонаж</td></tr>
+<tr><td>Перенос гаранта</td><td>На следующий лимитный баннер: закончили на 40 из 90, следующий начнётся с 40 из 90</td></tr>
+<tr><td>Поле обновляется</td><td>После 70 круток без S-ранга: S-клетки встречаются каждые 5–6 клеток</td></tr>
+<tr><td>Шанс за крутку после обновления</td><td>Около 19,59%</td></tr>
+</table></div>
+
+<h2 id="s1">Арки (оружие)</h2>
+<div class="tbl cp" style="--edge:#22303d"><table>
+<tr><th>Что</th><th>Как работает</th></tr>
+<tr><td>Гарант S-арка</td><td>Не позже 60-й крутки</td></tr>
+<tr><td>Фирменный арк с баннера</td><td>В пределах 80 круток (25% на S-арке, дальше гарантия)</td></tr>
+<tr><td>Ключи</td><td>Tri-Key, крутки арков только десятками</td></tr>
+</table></div>
+
+<h2 id="s2">Где гайды расходятся</h2>
+<div class="box warn">
+<p><b>Базовый шанс S-ранга.</b> Один гайд называет 0,99%, другой 1,88%. Мы не выбираем за вас: точную цифру смотрите в правилах баннера в игре. <a href="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">Калькулятор круток</a> показывает шанс по обоим вариантам.</p>
+<p><b>Стоимость крутки.</b> Один гайд называет 160 Annulith за крутку. Проверьте в игре перед расчётом.</p>
+</div>
+
+<h2 id="s3">Сколько круток осталось именно у вас</h2>
+<p>Введите, сколько круток прошло без S-ранга, сколько у вас Solid Dice и Annulith. Калькулятор покажет, сколько осталось до гаранта, хватает ли ресурсов и какой шанс получить персонажа.</p>
+<div class="cta">
+  <a class="btn" href="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">Открыть калькулятор круток</a>
+  <a class="btn alt" href="https://max.ru/channel_nte_po_russki">Новости NTE в MAX</a>
+</div>
+
+<h2 id="s4">Источники</h2>
+<p class="src"><a href="https://www.bluestacks.com/blog/game-guides/neverness-to-everness/nte-gacha-guide-en.html" rel="noopener">BlueStacks: гайд по гаче NTE</a>, <a href="https://www.enjoygm.com/blog/neverness-to-everness/gacha-system-guide" rel="noopener">EnjoyGM: гайд по гаче NTE</a>. Neverness to Everness принадлежит Hotta Studio и Perfect World; сайт неофициальный.</p>
+
+<h2 id="faq">Частые вопросы</h2><details class="cp"><summary>Сколько круток до гаранта в NTE?</summary><p>На лимитном баннере персонажа гарантированный S-ранг выпадает на 90-й крутке. После 70 круток без S-ранга поле обновляется и S-клетки встречаются чаще.</p></details><details class="cp"><summary>Есть ли в NTE «50 на 50»?</summary><p>По данным двух гайдов, нет: любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера.</p></details><details class="cp"><summary>Переносится ли гарант на следующий баннер в NTE?</summary><p>Да, на следующий лимитный баннер персонажа. Если закончили на 40 из 90, следующий начнётся с 40 из 90.</p></details><details class="cp"><summary>Сколько круток нужно на арк в NTE?</summary><p>S-арк гарантирован не позже 60-й крутки, фирменный арк с баннера в пределах 80 круток.</p></details><details class="cp"><summary>Какой базовый шанс S-ранга в NTE?</summary><p>Гайды расходятся: 0,99% у одного и 1,88% у другого. Точную цифру смотрите в правилах баннера в игре.</p></details>
+<h2 class="related">Читайте также</h2><div class="tiles"><a class="tile cp s6" href="https://kitron4ik.github.io/nte-po-russki/nte/valyuty/" style="--img:url('https://kitron4ik.github.io/nte-po-russki/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class=ic src=https://kitron4ik.github.io/nte-po-russki/assets/icon-nte-gift.png alt='' width=76 height=76><b>Валюты NTE: что на что менять</b><span>Какие валюты есть в Neverness to Everness и на что они меняются: Annulith, Solid Dice, Fabricated Dice, Tri-Key.</span></a></div></article></div>
+<footer><div>NTE по-русски – неофициальный проект игроков. Neverness to Everness принадлежит Hotta Studio и Perfect World. Канал: <a href="https://max.ru/channel_nte_po_russki">NTE по-русски в MAX</a>.</div></footer>
+<script>
+(function(){
+  var prog=document.getElementById('prog');
+  function onScroll(){var h=document.documentElement;var t=h.scrollHeight-h.clientHeight;prog.style.transform='scaleX('+(t>0?h.scrollTop/t:0)+')';}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  if(links.length&&'IntersectionObserver' in window){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('article h2').forEach(function(h){io.observe(h)});
+  }
+})();
+</script>
+</body>
+</html>
