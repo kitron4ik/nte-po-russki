@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><polygon points="9,2 62,2 62,55 55,62 2,62 2,9" fill="#0e1620" stroke="#ffc61a" stroke-width="2" stroke-linejoin="round"/><path d="M15 50C15 28 28 15 49 13C39 21 35 33 35 50Z" fill="#ffc61a" stroke="#07090d" stroke-width="2" stroke-linejoin="round"/>
+<path d="M19 46C20 31 29 22 42 17" fill="none" stroke="#50e6ff" stroke-width="3" stroke-linecap="round"/>
+<rect x="30" y="50" width="12" height="5" rx="1.5" fill="#50e6ff" stroke="#07090d" stroke-width="1.6"/></svg>

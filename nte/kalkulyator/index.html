@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Калькулятор круток NTE: гарант, шанс S-ранга, сколько Annulith нужно</title>
-<meta name="description" content="Бесплатный калькулятор круток Neverness to Everness (НТЕ): сколько круток до гаранта персонажа и арка, сколько Annulith не хватает, шанс получить S-ранг за ваши круты.">
+<title>Калькулятор круток NTE: гарант, шанс S-ранга, сколько Аннулита нужно</title>
+<meta name="description" content="Бесплатный калькулятор круток Neverness to Everness (НТЕ): сколько круток до гаранта персонажа и дуги (арки), сколько Аннулита не хватает, шанс получить S-ранг за ваши круты.">
 <meta property="og:title" content="Калькулятор круток NTE (Neverness to Everness)">
-<meta property="og:description" content="Сколько круток до гаранта, сколько Annulith не хватает и какой шанс получить персонажа за ваши круты.">
-<meta property="og:image" content="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/og.jpg">
-<meta property="og:url" content="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">
-<link rel="canonical" href="https://kitron4ik.github.io/nte-po-russki/nte/kalkulyator/">
+<meta property="og:description" content="Сколько круток до гаранта, сколько Аннулита не хватает и какой шанс получить персонажа за ваши круты.">
+<meta property="og:image" content="https://kitron4ik.github.io/nte/kalkulyator/og.jpg">
+<meta property="og:url" content="https://kitron4ik.github.io/nte/kalkulyator/">
+<link rel="canonical" href="https://kitron4ik.github.io/nte/kalkulyator/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#07090d">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Сколько круток до гаранта в NTE?","acceptedAnswer":{"@type":"Answer","text":"На лимитном баннере персонажа гарантированный S-ранг выпадает на 90-й крутке. После 70 круток без S-ранга игровое поле обновляется, и S-клетки встречаются чаще."}},
-{"@type":"Question","name":"Есть ли в NTE «50 на 50»?","acceptedAnswer":{"@type":"Answer","text":"По данным двух гайдов, нет: любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера."}},
+{"@type":"Question","name":"Есть ли в NTE «50 на 50»?","acceptedAnswer":{"@type":"Answer","text":"Нет: любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера."}},
 {"@type":"Question","name":"Переносится ли гарант на следующий баннер?","acceptedAnswer":{"@type":"Answer","text":"Да, на следующий лимитный баннер персонажа. Если закончили на 40 из 90, следующий баннер начнётся с 40 из 90."}},
-{"@type":"Question","name":"Сколько круток нужно на арк (оружие)?","acceptedAnswer":{"@type":"Answer","text":"S-арк гарантирован не позже 60-й крутки. Фирменный арк с баннера гарантирован в пределах 80 круток."}},
-{"@type":"Question","name":"Какой шанс S-ранга в NTE без гаранта?","acceptedAnswer":{"@type":"Answer","text":"Гайды расходятся: 0,99% у одного и 1,88% у другого. Точную цифру смотрите в правилах баннера в игре. Калькулятор считает по обоим вариантам."}}
+{"@type":"Question","name":"Сколько круток нужно на дугу (оружие)?","acceptedAnswer":{"@type":"Answer","text":"S-дуга гарантирована не позже 60-й крутки. Фирменная дуга с баннера гарантирована в пределах 80 круток."}},
+{"@type":"Question","name":"Какой шанс S-ранга в NTE без гаранта?","acceptedAnswer":{"@type":"Answer","text":"От 0,99% до 1,88%. Точную цифру смотрите в правилах баннера в игре. Калькулятор считает по обоим вариантам."}}
 ]}
 </script>
 <style>
@@ -115,6 +115,10 @@ footer div{max-width:var(--max);margin:0 auto}
  .stage-in{padding-bottom:calc(var(--H) * .68);min-height:0}
  .main{padding-top:calc(var(--HH) * .37 + 34px)}
 }
+@media (max-width:1060px){.nav{padding:8px 11px;font-size:13px}.logo{font-size:16px;gap:8px}.logo img{width:34px;height:34px}.pill{margin-left:4px;padding:8px 14px;font-size:13px}.top div{padding:8px 14px}}
+@media (max-width:860px){.nav.x2{display:none}}
+.mnav{display:none}
+@media (max-width:560px){.top .nav{display:none}.mnav{display:flex;gap:6px;overflow-x:auto;padding:2px 14px 8px;max-width:var(--max);margin:0 auto;scrollbar-width:none}.mnav::-webkit-scrollbar{display:none}.mnav a{flex:none;color:#cfd8e0;font:400 13px "Russo One",sans-serif;text-decoration:none;padding:7px 13px;background:#0e1620;clip-path:var(--slant)}.mnav a.cur{background:var(--y);color:#000}}
 @media (max-width:620px){
  body{font-size:16.5px}
  .grid{grid-template-columns:1fr}
@@ -127,20 +131,35 @@ footer div{max-width:var(--max);margin:0 auto}
  .tab{font-size:14px}
 }
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113711643', 'ym');
+
+    ym(113711643, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113711643" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <header class="top"><div>
-  <a class="logo" href="https://kitron4ik.github.io/nte-po-russki/"><img src="logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
-  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/garant/">Гарант</a>
-  <a class="nav opt" href="https://kitron4ik.github.io/nte-po-russki/nte/valyuty/">Валюты</a>
+  <a class="logo" href="https://nteporusski.ru/"><img src="logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
+  <a class="nav opt x2" href="https://nteporusski.ru/nte/s-chego-nachat/">Новичку</a>
+  <a class="nav opt" href="https://nteporusski.ru/nte/garant/">Гарант</a>
+  <a class="nav opt x2" href="https://nteporusski.ru/nte/valyuty/">Валюты</a>
+  <a class="nav opt x2" href="https://nteporusski.ru/nte/kody/">Коды</a>
   <a class="nav opt cur" href="./" aria-current="page">Калькулятор</a>
   <a class="pill" href="https://max.ru/channel_nte_po_russki" rel="noopener">Канал в MAX</a>
-</div></header>
+</div><nav class="mnav" aria-label="Разделы"><a href="https://nteporusski.ru/nte/personazhi/">Герои</a><a href="https://nteporusski.ru/nte/s-chego-nachat/">Новичку</a><a href="https://nteporusski.ru/nte/garant/">Гарант</a><a href="https://nteporusski.ru/nte/valyuty/">Валюты</a><a href="https://nteporusski.ru/nte/kody/">Коды</a><a href="./" class="cur">Калькулятор</a></nav></header>
 <section class="stage"><div class="stage-bg"></div><div class="giant" aria-hidden="true">NTE</div>
 <div class="stage-in">
   <span class="tag">Инструмент</span>
   <h1><span class="slab y"><span>Калькулятор</span></span><span class="slab k"><span>круток NTE</span></span></h1>
-  <p class="lead">Neverness to Everness (НТЕ): сколько круток до гаранта, сколько Annulith не хватает и какой шанс получить S-ранг. Без регистрации.</p>
+  <p class="lead">Neverness to Everness (НТЕ): сколько круток до гаранта, сколько Аннулита не хватает и какой шанс получить S-ранг. Без регистрации.</p>
 </div>
 <div class="pedestal-sh"></div><div class="pedestal">КРУТКИ NTE</div>
 <img class="girl" src="hero-coin.png" alt="Героиня NTE по-русски сидит и подбрасывает монету" width="320" height="522">
@@ -148,7 +167,7 @@ footer div{max-width:var(--max);margin:0 auto}
 <main class="main"><div class="col">
   <div class="tabs" role="tablist">
     <button class="tab" role="tab" id="tab-char" aria-selected="true" aria-controls="p-char">Персонаж</button>
-    <button class="tab" role="tab" id="tab-arc" aria-selected="false" aria-controls="p-arc">Арк (оружие)</button>
+    <button class="tab" role="tab" id="tab-arc" aria-selected="false" aria-controls="p-arc">Дуга (оружие)</button>
   </div>
 
   <section class="panel cp" id="p-char" role="tabpanel">
@@ -159,19 +178,19 @@ footer div{max-width:var(--max);margin:0 auto}
         <p class="hint">Сколько круток прошло с последнего S-ранга на лимитном баннере персонажа. Гарант переходит между лимитными баннерами.</p>
       </div>
       <div>
-        <label for="c-dice">Solid Dice</label>
+        <label for="c-dice">Твёрдые кубики (Solid Dice)</label>
         <input id="c-dice" type="number" inputmode="numeric" min="0" value="0">
         <p class="hint">Одна крутка лимитного баннера персонажа.</p>
       </div>
       <div>
-        <label for="c-ann">Annulith</label>
+        <label for="c-ann">Аннулит (Annulith)</label>
         <input id="c-ann" type="number" inputmode="numeric" min="0" value="0">
-        <p class="hint">Из него делают Solid Dice.</p>
+        <p class="hint">Из него делают кубики.</p>
       </div>
       <div>
-        <label for="c-cost">Annulith за одну крутку</label>
+        <label for="c-cost">Аннулита за одну крутку</label>
         <input id="c-cost" type="number" inputmode="numeric" min="1" value="160">
-        <p class="hint">160 по одному гайду (EnjoyGM). Проверьте в игре и поправьте.</p>
+        <p class="hint">Около 160. Проверьте в игре и поправьте.</p>
       </div>
     </div>
     <div class="res" id="r-char" aria-live="polite"></div>
@@ -180,14 +199,14 @@ footer div{max-width:var(--max);margin:0 auto}
   <section class="panel cp hidden" id="p-arc" role="tabpanel">
     <div class="grid">
       <div>
-        <label for="a-pity">Круток без S-арка (0–59)</label>
+        <label for="a-pity">Круток без S-дуги (0–59)</label>
         <input id="a-pity" type="number" inputmode="numeric" min="0" max="59" value="0">
-        <p class="hint">Сколько круток на баннере арков прошло с последнего S-арка.</p>
+        <p class="hint">Сколько круток на баннере дуг прошло с последней S-дуги.</p>
       </div>
       <div>
-        <label for="a-keys">Tri-Key</label>
+        <label for="a-keys">Тройные ключи (Tri-Key)</label>
         <input id="a-keys" type="number" inputmode="numeric" min="0" value="0">
-        <p class="hint">Крутки арков идут только десятками, по одному гайду (BlueStacks).</p>
+        <p class="hint">Крутки дуг идут только десятками.</p>
       </div>
     </div>
     <div class="res" id="r-arc" aria-live="polite"></div>
@@ -198,7 +217,7 @@ footer div{max-width:var(--max);margin:0 auto}
     <button class="btn alt" id="share">Скопировать результат</button>
     <span id="share-ok" class="note"></span>
   </div>
-  <p class="note">В канале в MAX: календарь событий, гайды для новичков и ответы на вопросы. Всё проверяем по двум источникам.</p>
+  <p class="note">В канале в MAX: календарь событий, гайды для новичков и ответы на вопросы.</p>
 
   <h2>Как это считается</h2>
   <table>
@@ -206,18 +225,18 @@ footer div{max-width:var(--max);margin:0 auto}
     <tr><td>Гарант S-ранга для персонажа</td><td>90-я крутка</td></tr>
     <tr><td>«50 на 50» на лимитном баннере</td><td>Нет: любой S-ранг это персонаж баннера</td></tr>
     <tr><td>Перенос гаранта</td><td>На следующий лимитный баннер (40/90 остаётся 40/90)</td></tr>
-    <tr><td>Поле обновляется</td><td>После 70 круток без S-ранга; шанс по гайдам ~19,59% за крутку</td></tr>
-    <tr><td>Базовый шанс S-ранга</td><td>0,99% или 1,88%, гайды расходятся: считаем оба</td></tr>
-    <tr><td>Арки</td><td>S-арк не позже 60-й крутки; фирменный в пределах 80</td></tr>
+    <tr><td>Поле обновляется</td><td>После 70 круток без S-ранга; шанс ~19,59% за крутку</td></tr>
+    <tr><td>Базовый шанс S-ранга</td><td>от 0,99% до 1,88%: считаем оба варианта</td></tr>
+    <tr><td>Дуги (оружие)</td><td>S-дуга не позже 60-й крутки; фирменная в пределах 80</td></tr>
   </table>
   <p class="note">Шанс считается как оценка: до 70-й крутки по базовому шансу, с 71-й по 19,59%, на 90-й гарантия. Реальная механика поля может отличаться. Это не официальные данные.</p>
 
   <h2>Частые вопросы</h2>
   <details class="cp"><summary>Сколько круток до гаранта в NTE?</summary><p>На лимитном баннере персонажа гарантированный S-ранг на 90-й крутке. После 70 круток без S-ранга игровое поле обновляется, S-клетки встречаются чаще.</p></details>
-  <details class="cp"><summary>Есть ли в NTE «50 на 50»?</summary><p>По данным двух гайдов, нет. Любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера.</p></details>
+  <details class="cp"><summary>Есть ли в NTE «50 на 50»?</summary><p>Нет. Любой S-ранг на лимитном баннере персонажа это тот самый персонаж с баннера.</p></details>
   <details class="cp"><summary>Переносится ли гарант на следующий баннер?</summary><p>Да, на следующий лимитный баннер персонажа. Закончили на 40 из 90, следующий начнётся с 40 из 90.</p></details>
-  <details class="cp"><summary>Сколько круток нужно на арк?</summary><p>S-арк гарантирован не позже 60-й крутки. Фирменный арк с баннера гарантирован в пределах 80 круток.</p></details>
-  <details class="cp"><summary>Какой базовый шанс S-ранга?</summary><p>Гайды расходятся: 0,99% и 1,88%. Точную цифру смотрите в правилах баннера в игре. Калькулятор показывает шанс по обоим вариантам.</p></details>
+  <details class="cp"><summary>Сколько круток нужно на дугу?</summary><p>S-дуга гарантирована не позже 60-й крутки. Фирменная дуга с баннера гарантирована в пределах 80 круток.</p></details>
+  <details class="cp"><summary>Какой базовый шанс S-ранга?</summary><p>От 0,99% до 1,88%. Точную цифру смотрите в правилах баннера в игре. Калькулятор показывает шанс по обоим вариантам.</p></details>
 
   <p class="src">Источники: <a href="https://www.bluestacks.com/blog/game-guides/neverness-to-everness/nte-gacha-guide-en.html" rel="noopener">BlueStacks, 16.04.2026</a>, <a href="https://www.enjoygm.com/blog/neverness-to-everness/gacha-system-guide" rel="noopener">EnjoyGM, 06.04.2026</a>. Данные проверены 17.10.2026, неофициальные. Neverness to Everness принадлежит Hotta Studio и Perfect World; сайт не связан с издателями.</p>
 </div></main>
@@ -228,11 +247,11 @@ footer div{max-width:var(--max);margin:0 auto}
 const RULES = {
   charHard: 90,            // гарант S-ранга для персонажа
   softStart: 70,           // после стольких круток без S поле обновляется
-  softRate: 0.1959,        // шанс за крутку после обновления поля (оба гайда)
-  baseRates: [0.0099, 0.0188], // гайды расходятся
-  arcFirst: 60,            // S-арк гарантирован не позже
-  arcSigned: 80,           // фирменный арк в пределах
-  costDefault: 160         // Annulith за крутку (EnjoyGM)
+  softRate: 0.1959,        // шанс за крутку после обновления поля 
+  baseRates: [0.0099, 0.0188], // оба известных значения
+  arcFirst: 60,            // S-дуга гарантирована не позже
+  arcSigned: 80,           // фирменная дуга в пределах
+  costDefault: 160         // Аннулит за крутку (EnjoyGM)
 };
 
 const $ = (id) => document.getElementById(id);
@@ -287,17 +306,17 @@ function calcChar() {
   let html = "";
   html += box("До гаранта осталось", `${rem} ${plural(rem, "крутка", "крутки", "круток")}`,
     `<div class="bar"><i style="width:${progress}%"></i></div>Накоплено ${pity} из ${RULES.charHard} (${progress}%)`);
-  html += box("Доступно круток", `${have}`, `${dice} Solid Dice и ${Math.floor(ann / cost)} из Annulith (по ${cost} за крутку)`);
-  html += box(enough ? "На гарант хватает" : "Не хватает Annulith", enough ? "Да" : needAnn.toLocaleString("ru-RU"),
+  html += box("Доступно круток", `${have}`, `${dice} твёрдых кубиков и ${Math.floor(ann / cost)} из Аннулита (по ${cost} за крутку)`);
+  html += box(enough ? "На гарант хватает" : "Не хватает Аннулита", enough ? "Да" : needAnn.toLocaleString("ru-RU"),
     enough ? `Останется ${have - rem} ${plural(have - rem, "крутка", "крутки", "круток")} после гаранта` : `Ещё ${rem - have} ${plural(rem - have, "крутка", "крутки", "круток")}`, enough ? "ok" : "bad");
   html += box("Шанс получить персонажа", `${pct(pLo)} – ${pct(pHi)}`,
     `С ${have} ${plural(have, "круткой", "крутками", "крутками")}. Левая цифра при базовом шансе 0,99%, правая при 1,88%`);
   const soft = pity >= RULES.softStart;
   const msg = soft
-    ? `У вас уже ${pity} круток без S-ранга: поле обновлено, шанс за крутку по гайдам около ${(RULES.softRate * 100).toFixed(2).replace(".", ",")}%.`
+    ? `У вас уже ${pity} круток без S-ранга: поле обновлено, шанс за крутку около ${(RULES.softRate * 100).toFixed(2).replace(".", ",")}%.`
     : `Поле обновится после ${RULES.softStart} круток без S-ранга, то есть через ${RULES.softStart - pity} ${plural(RULES.softStart - pity, "крутку", "крутки", "круток")}.`;
   $("r-char").innerHTML = html + `<div class="msg" style="grid-column:1/-1">${msg}</div>`;
-  return `NTE, персонаж: ${pity}/${RULES.charHard} круток, до гаранта ${rem}; доступно ${have}; ` + (enough ? "на гарант хватает" : `не хватает ${needAnn} Annulith`) + `; шанс ${pct(pLo)}–${pct(pHi)}`;
+  return `NTE, персонаж: ${pity}/${RULES.charHard} круток, до гаранта ${rem}; доступно ${have}; ` + (enough ? "на гарант хватает" : `не хватает ${needAnn} Аннулита`) + `; шанс ${pct(pLo)}–${pct(pHi)}`;
 }
 
 function calcArc() {
@@ -308,13 +327,13 @@ function calcArc() {
   const progress = Math.round((pity / RULES.arcFirst) * 100);
   const tens = Math.floor(keys / 10);
   let html = "";
-  html += box("До гаранта S-арка", `${remFirst} ${plural(remFirst, "крутка", "крутки", "круток")}`,
+  html += box("До гаранта S-дуги", `${remFirst} ${plural(remFirst, "крутка", "крутки", "круток")}`,
     `<div class="bar"><i style="width:${progress}%"></i></div>Накоплено ${pity} из ${RULES.arcFirst} (${progress}%)`);
-  html += box("Фирменный арк не позже", `${remSigned} ${plural(remSigned, "крутка", "крутки", "круток")}`,
-    "По гайдам на первом S-арке 25% шанс фирменного, дальше гарантия в пределах 80 круток всего. Как именно считается после S-арка, проверьте в игре.");
-  html += box("Tri-Key", `${keys}`, `Хватит на ${tens} ${plural(tens, "десятку", "десятки", "десяток")} (${tens * 10} круток)`, tens * 10 >= remFirst ? "ok" : "");
-  $("r-arc").innerHTML = html + `<div class="msg" style="grid-column:1/-1">Шанс получить S-арк до гарантии не считаем: базовый шанс для арков в гайдах не указан.</div>`;
-  return `NTE, арк: ${pity}/${RULES.arcFirst} круток, до гаранта ${remFirst}; фирменный в пределах ${remSigned}; Tri-Key ${keys}`;
+  html += box("Фирменная дуга не позже", `${remSigned} ${plural(remSigned, "крутка", "крутки", "круток")}`,
+    "На первой S-дуге 25% шанс фирменной, дальше гарантия в пределах 80 круток всего. Как именно считается после S-арка, проверьте в игре.");
+  html += box("Тройные ключи", `${keys}`, `Хватит на ${tens} ${plural(tens, "десятку", "десятки", "десяток")} (${tens * 10} круток)`, tens * 10 >= remFirst ? "ok" : "");
+  $("r-arc").innerHTML = html + `<div class="msg" style="grid-column:1/-1">Шанс получить S-дугу до гарантии не считаем: базовый шанс для дуг неизвестен.</div>`;
+  return `NTE, дуга: ${pity}/${RULES.arcFirst} круток, до гаранта ${remFirst}; фирменная в пределах ${remSigned}; Тройных ключей ${keys}`;
 }
 
 let last = "";

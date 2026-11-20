@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><polygon points="9,2 62,2 62,55 55,62 2,62 2,9" fill="#0e1620" stroke="#ffc61a" stroke-width="2" stroke-linejoin="round"/><circle cx="32" cy="32" r="13" fill="none" stroke="#ffc61a" stroke-width="3.6"/>
+<path d="M32 10V22M32 42V54M10 32H22M42 32H54" stroke="#ffc61a" stroke-width="3.6" stroke-linecap="round"/>
+<circle cx="32" cy="32" r="3.4" fill="#50e6ff"/></svg>

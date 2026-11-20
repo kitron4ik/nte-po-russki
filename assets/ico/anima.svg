@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><polygon points="9,2 62,2 62,55 55,62 2,62 2,9" fill="#0e1620" stroke="#ffc61a" stroke-width="2" stroke-linejoin="round"/><circle cx="32" cy="32" r="5.5" fill="#50e6ff"/>
+<ellipse cx="32" cy="32" rx="19" ry="8" fill="none" stroke="#ffc61a" stroke-width="3" transform="rotate(30 32 32)"/>
+<ellipse cx="32" cy="32" rx="19" ry="8" fill="none" stroke="#50e6ff" stroke-width="3" transform="rotate(-30 32 32)"/></svg>
