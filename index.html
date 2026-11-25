@@ -6,8 +6,8 @@
 <title>NTE по-русски: гарант, валюты и калькулятор круток Neverness to Everness</title>
 <meta name="description" content="Гайды и инструменты по Neverness to Everness (НТЕ) на русском: как работает гарант, на что менять Annulith, калькулятор круток. Проверенные цифры и ссылки на источники в конце каждой страницы.">
 <link rel="canonical" href="https://nteporusski.ru/">
-<link rel="icon" type="image/png" sizes="32x32" href="https://nteporusski.ru/assets/favicon-32.png">
-<link rel="apple-touch-icon" href="https://nteporusski.ru/assets/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nteporusski.ru/assets/mascot-v2/favicon-32.png">
+<link rel="apple-touch-icon" href="https://nteporusski.ru/assets/mascot-v2/logo-192.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NTE по-русски: гарант, валюты и калькулятор круток Neverness to Everness">
 <meta property="og:description" content="Гайды и инструменты по Neverness to Everness (НТЕ) на русском: как работает гарант, на что менять Annulith, калькулятор круток. Проверенные цифры и ссылки на источники в конце каждой страницы.">
@@ -78,9 +78,12 @@ h1{margin:0 0 22px;line-height:1;display:flex;flex-direction:column;align-items:
 .pedestal{position:absolute;right:calc(2% - 70px);bottom:-46px;width:clamp(600px,50vw,980px);height:clamp(72px,5vw,96px);z-index:4;background:var(--y);clip-path:polygon(34px 0,100% 0,calc(100% - 34px) 100%,0 100%);display:flex;align-items:center;justify-content:flex-start;padding-left:64px;font:400 18px "Russo One",sans-serif;color:#000;letter-spacing:.16em}
 .pedestal::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,.2) 1.3px,transparent 2px);background-size:7px 7px}
 .pedestal-sh{position:absolute;right:calc(2% - 84px);bottom:-60px;width:clamp(600px,50vw,980px);height:clamp(72px,5vw,96px);z-index:3;background:#000;clip-path:polygon(34px 0,100% 0,calc(100% - 34px) 100%,0 100%)}
-.keyart{position:absolute;right:clamp(10px,calc((100vw - 1000px) * .3),13%);bottom:-6px;height:84%;aspect-ratio:570/1000;z-index:6;pointer-events:none}
-.keyart img,.keyart video{position:relative;display:block;width:100%;height:100%;filter:drop-shadow(8px 10px 0 rgba(0,0,0,.4));z-index:2}
-.keyart .beam{position:absolute;left:-89%;width:102%;top:21%;height:24%;z-index:1;background:linear-gradient(270deg,rgba(255,246,190,.45),rgba(255,246,190,0) 90%);clip-path:polygon(100% 50%,0 0,0 100%);transform:rotate(7deg);transform-origin:100% 50%;mix-blend-mode:screen}
+.keyart{position:absolute;right:clamp(10px,calc((100vw - 1000px) * .3),13%);bottom:-6px;height:84%;aspect-ratio:732/1350;z-index:6;pointer-events:none;transform-origin:50% 96%;animation:mascot-idle 6s ease-in-out infinite}
+.keyart img{position:relative;display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(8px 10px 0 rgba(0,0,0,.4));z-index:2}
+.keyart .beam{position:absolute;left:-74%;width:88%;top:23%;height:22%;z-index:1;background:linear-gradient(270deg,rgba(255,246,190,.45),rgba(255,246,190,0) 90%);clip-path:polygon(100% 50%,0 0,0 100%);transform:rotate(7deg);transform-origin:100% 50%;mix-blend-mode:screen;animation:mascot-beam 6s ease-in-out infinite}
+@keyframes mascot-idle{50%{transform:rotate(.7deg) scaleY(1.006)}}
+@keyframes mascot-beam{50%{opacity:.64}}
+@keyframes mascot-rest{50%{transform:rotate(-.65deg)}}
 @keyframes float{50%{transform:translateY(-10px)}}
 @keyframes slide{from{opacity:0;transform:skewX(-8deg) translateX(-40px)}to{opacity:1;transform:skewX(-8deg)}}
 .kicker{animation-name:slideK}@keyframes slideK{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
@@ -146,7 +149,7 @@ i.best.g{background:var(--c)}
 @media (max-width:700px){.pc{grid-template-columns:1fr}}
 @media (max-width:560px){.team{padding:14px 12px}.tslots{gap:4px}.slot .av{width:56px;height:56px;border-width:2px}.slot b{font-size:11px}.slot i{font-size:9.5px;padding:2px 4px;clip-path:none;border-radius:5px;line-height:1.15;white-space:normal;overflow-wrap:anywhere}.rstep{grid-template-columns:28px minmax(0,1fr);row-gap:8px}.rstep p{grid-column:1/-1}.skt{width:92px}.ska{font-size:24px}.mat{white-space:normal}}
 .side .girl.up{height:320px;width:auto;max-width:70%;right:14px;top:auto;bottom:calc(100% - 314px);z-index:4}
-.side .girl.lie{height:auto;width:min(430px,92%);right:-6px;top:auto;bottom:calc(100% - 314px);z-index:7}
+.side .girl.lie{height:auto;width:min(430px,92%);right:-6px;top:auto;bottom:calc(100% - 314px);z-index:7;transform-origin:70% 92%;animation:mascot-rest 6s ease-in-out infinite}
 .step:first-child{box-shadow:0 -6px 0 #000}
 .step{--fill:#0c141c;padding:16px 22px;display:flex;align-items:baseline;gap:14px}
 .step b{font:400 clamp(34px,5vw,56px)/1 "Russo One",sans-serif;color:var(--y2);white-space:nowrap}
@@ -302,7 +305,7 @@ footer div{max-width:var(--max);margin:0 auto}footer a{color:var(--mut)}
 .cur i{position:absolute;width:5px;height:5px;border-radius:50%;background:#07090d;opacity:0}
 .cur i.on{opacity:1}
 @media (hover:none),(pointer:coarse){.cur{display:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kicker,.slab,.girl{animation:none!important}.btn,.tile,.nav::before,details{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.kicker,.slab,.girl,.keyart,.keyart .beam{animation:none!important}.btn,.tile,.nav::before,details{transition:none}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -319,9 +322,9 @@ footer div{max-width:var(--max);margin:0 auto}footer a{color:var(--mut)}
 <!-- /Yandex.Metrika counter -->
 </head>
 <body class="nte home">
-<div class="prog" id="prog"></div><img class="runner" id="runner" src="https://nteporusski.ru/assets/runner.webp" alt="" width="92" height="130">
+<div class="prog" id="prog"></div><img class="runner" id="runner" src="https://nteporusski.ru/assets/mascot-v2/run.webp" alt="" width="162" height="230">
 <header class="top"><div>
-  <a class="logo" href="https://nteporusski.ru/"><img src="https://nteporusski.ru/assets/logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
+  <a class="logo" href="https://nteporusski.ru/"><img src="https://nteporusski.ru/assets/mascot-v2/logo-192.png" alt="" width="40" height="40">NTE по-русски</a>
   <a class="nav opt" href="https://nteporusski.ru/nte/personazhi/">Герои</a>
   <a class="nav opt x2" href="https://nteporusski.ru/nte/s-chego-nachat/">Новичку</a>
   <a class="nav" href="https://nteporusski.ru/nte/garant/">Гарант</a>
@@ -338,16 +341,16 @@ footer div{max-width:var(--max);margin:0 auto}footer a{color:var(--mut)}
   <p class="lead">Гайды и инструменты для игроков: гарант, валюты, коды, калькулятор и разбор каждого героя.</p>
   <div class="cta"><a class="btn" href="https://nteporusski.ru/nte/garant/">Гарант в NTE</a><a class="btn alt" href="https://nteporusski.ru/nte/kalkulyator/">Калькулятор круток</a></div>
 </div></div>
-<div class="keyart"><i class="beam"></i><video autoplay loop muted playsinline preload="auto" poster="https://nteporusski.ru/assets/hero-key-poster.png" width="570" height="1000" aria-label="Героиня NTE по-русски в жёлтом дождевике подмигивает и светит фонариком"><source src="https://nteporusski.ru/assets/key-anim.mov" type='video/mp4; codecs="hvc1"'><source src="https://nteporusski.ru/assets/key-anim.webm" type="video/webm"></video></div>
+<div class="keyart"><i class="beam" aria-hidden="true"></i><img src="https://nteporusski.ru/assets/mascot-v2/hero-key.webp" width="732" height="1350" alt="Героиня NTE по-русски в жёлтом дождевике светит фонариком" fetchpriority="high"></div>
 <div class="stage-cut"></div></section>
 <main class="home-main">
 <h2>Что читать</h2>
 <div class="tiles">
-  <a class="tile cp s7 tall perch" href="https://nteporusski.ru/nte/garant/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><img class="perchart sit" src="https://nteporusski.ru/assets/pose-sit-edge.webp" alt="" width="176" height="283" loading="lazy"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-crown.png" alt="" width="76" height="60"><span class="no">01</span><b>Гарант в NTE: как он работает</b><span>90 круток, арки, перенос гаранта и шанс S-ранга.</span></a>
+  <a class="tile cp s7 tall perch" href="https://nteporusski.ru/nte/garant/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><img class="perchart sit" src="https://nteporusski.ru/assets/mascot-v2/sit-edge.webp" alt="" width="420" height="675" loading="lazy"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-crown.png" alt="" width="76" height="60"><span class="no">01</span><b>Гарант в NTE: как он работает</b><span>90 круток, арки, перенос гаранта и шанс S-ранга.</span></a>
   <a class="tile cp s5 tall" href="https://nteporusski.ru/nte/kalkulyator/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-dice.png" alt="" width="76" height="76"><span class="no">02</span><b>Калькулятор круток</b><span>Сколько осталось до гаранта и какой шанс получить S-ранг.</span></a>
   <a class="tile cp s5" href="https://nteporusski.ru/nte/valyuty/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-gift.png" alt="" width="76" height="76"><span class="no">03</span><b>Валюты NTE</b><span>Annulith, кубики, ключи арков и что на что менять.</span></a>
   <a class="tile cp s7" href="https://nteporusski.ru/nte/s-chego-nachat/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-calendar.png" alt="" width="76" height="76"><span class="no">04</span><b>С чего начать в NTE</b><span>Первая неделя по дням: что делать, что не тратить и кого брать из шести S-рангов.</span></a>
-  <a class="tile cp s5 perch2" href="https://nteporusski.ru/nte/kody/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><img class="perchart lean" src="https://nteporusski.ru/assets/pose-lean-edge.webp" alt="" width="140" height="186" loading="lazy"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-scroll.png" alt="" width="76" height="76"><span class="no">05</span><b>Коды NTE</b><span>Рабочие коды с наградами и как их ввести.</span></a>
+  <a class="tile cp s5 perch2" href="https://nteporusski.ru/nte/kody/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><img class="perchart lean" src="https://nteporusski.ru/assets/mascot-v2/lean-edge.webp" alt="" width="466" height="620" loading="lazy"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-scroll.png" alt="" width="76" height="76"><span class="no">05</span><b>Коды NTE</b><span>Рабочие коды с наградами и как их ввести.</span></a>
   <a class="tile cp s7" href="https://nteporusski.ru/nte/personazhi/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/ico/dps.svg" alt="" width="76" height="76"><span class="no">06</span><b>Герои NTE</b><span>24 героя с официальными русскими именами: фракции, навыки и пробуждения по текстам игры.</span></a>
   <a class="tile cp s5" href="https://nteporusski.ru/nte/nanally/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/char/nanally.png" alt="" width="76" height="76"><span class="no">07</span><b>Наналли: навыки и сборка</b><span>Основной ДД анимы: навыки, команды, дуги, прокачка и приоритет пробуждений.</span></a>
   <a class="tile cp s7" href="https://nteporusski.ru/nte/jiuyuan/" style="--img:url('https://nteporusski.ru/assets/hero-nte.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/char/jiuyuan.png" alt="" width="76" height="76"><span class="no">08</span><b>Цзююань: навыки и команды</b><span>Сбор врагов и договор розы: роли саб-ДД и поддержки, команды, дуги и прокачка в одном гайде.</span></a>
@@ -356,7 +359,7 @@ footer div{max-width:var(--max);margin:0 auto}footer a{color:var(--mut)}
   <a class="tile cp s5" href="https://max.ru/channel_nte_po_russki" style="--img:url('https://nteporusski.ru/assets/hero-home.jpg')"><i class="pic"></i><i class="shade"></i><img class="ic" src="https://nteporusski.ru/assets/icon-nte-scroll.png" alt="" width="76" height="76"><span class="no">MAX</span><b>Канал «NTE по-русски»</b><span>Новости, события и ответы на вопросы.</span></a>
 </div>
 <div class="peekrow">
-  <img class="peek" src="https://nteporusski.ru/assets/hero-peek.png" alt="Героиня выглядывает из-за баннера и подмигивает" width="290" height="760">
+  <img class="peek" src="https://nteporusski.ru/assets/mascot-v2/hero-peek.webp" alt="Героиня выглядывает из-за баннера и подмигивает" width="342" height="900">
   <a class="peekband cp" href="https://max.ru/channel_nte_po_russki"><span class="kicker">MAX</span><b>Новости и ответы на вопросы – в канале</b><span class="pt">События с датами, разборы и ваши вопросы.</span><span class="btn">Открыть канал</span></a>
 </div>
 <p class="src" style="margin-top:30px">Проект неофициальный: игра принадлежит Hotta Studio и Perfect World.</p>
